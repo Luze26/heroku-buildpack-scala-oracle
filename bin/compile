@@ -33,7 +33,7 @@ export_env_dir $ENV_DIR
 
 JVM_COMMON_BUILDPACK=${JVM_COMMON_BUILDPACK:-"https://s3.eu-central-1.amazonaws.com/paper-site-assets/jvm-oracle-8.tgz"}
 mkdir -p /tmp/jvm-common
-curl --silent --location $JVM_COMMON_BUILDPACK | tar xzm -C /tmp/jvm-common --strip-components=1
+curl --silent --location $JVM_COMMON_BUILDPACK | tar xm -C /tmp/jvm-common --strip-components=1
 . /tmp/jvm-common/bin/util
 . /tmp/jvm-common/bin/java
 
